@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1751720980906"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1751720980906">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1751725767292"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1751725767292">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" class="header">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
 				<div class="header__container">
 					<div class="header__logo">
 						<img src="./assets/img/logo.svg" alt="Logo">
@@ -20,21 +20,21 @@
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="#" class="menu__link">Афіша</a>
+									<a href="#" data-fls-scrollto=".program__container" data-fls-scrollto-header="" class="menu__link">Програма</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">FAQ</a>
+									<a href="#" data-fls-scrollto=".faq__container" data-fls-scrollto-header="" class="menu__link">FAQ</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Контакти</a>
+									<a href="#" data-fls-scrollto=".footer" data-fls-scrollto-header="" class="menu__link">Контакти</a>
 								</li>
 							</ul>
 						</nav>
 					</div>
 					<ul class="header__social">
 						<div class="header__item">
-							<a href="#" class="header__link --icon-instagram header__link--pc">Instagram</a>
-							<a href="#" class="header__link --icon-instagram header__link--mobile"></a>
+							<a target="_blank" href="https://www.instagram.com/alisharoz_" class="header__link --icon-instagram header__link--pc">Instagram</a>
+							<a target="_blank" href="https://www.instagram.com/alisharoz_" class="header__link --icon-instagram header__link--mobile"></a>
 						</div>
 					</ul>
 				</div>
@@ -43,12 +43,15 @@
 				<section class="hero">
 					<div class="hero__container">
 						<div class="hero__content">
-							<div class="hero__subtitle tag">Закритий чат по стилю</div>
+							<div class="hero__subtitles">
+								<div class="hero__subtitle tag">Закритий чат по стилю</div>
+								<div class="hero__subtitle tag">Старт 14.07</div>
+							</div>
 							<h1 class="hero__title">Створи гардероб, що робить тебе впевненою щодня</h1>
 							<div class="hero__text">
 								І крок за кроком навчить виглядати стильно, впевнено та доречно в будь-якій ситуації
 							</div>
-							<button data-fls-button="" class="hero__button button --icon-arrow">Детальніше</button>
+							<button data-fls-scrollto=".program__container" data-fls-scrollto-header="" data-fls-button="" class="hero__button button --icon-arrow">Детальніше</button>
 							<div class="hero__img">
 								<img alt="Image" src="./assets/img/iphone.webp">
 							</div>
@@ -112,7 +115,7 @@
 								<li class="description__item">Рекомендації по зачісках, макіяжу та аксесуарах, які завершують образ.</li>
 							</ul>
 						</div>
-						<a href="#" data-fls-button="" class="description__button button --icon-arrow">Отримати доступ</a>
+						<a href="#" data-fls-scrollto=".form" data-fls-scrollto-header="" data-fls-button="" class="description__button button --icon-arrow">Отримати доступ</a>
 					</div>
 				</section>
 				<section class="style">
@@ -180,7 +183,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="#" data-fls-button="" class="stars__button button --icon-arrow">Хочу в чат</a>
+						<a href="#" data-fls-scrollto=".form" data-fls-scrollto-header="" data-fls-button="" class="stars__button button --icon-arrow">Хочу в чат</a>
 					</div>
 				</section>
 				<section class="program">
@@ -326,9 +329,11 @@
 							</details>
 							<details class="spollers__item">
 								<summary class="spollers__title">
-									Чим
-									<a href="#" target="_blank">Inside.style</a>
-									відрізняється від простої підписки на Instagram-сторінку?
+									<div>
+										Чим
+										<a class="spollers__link" href="#" target="_blank">Inside.style</a>
+										відрізняється від простої підписки на Instagram-сторінку?
+									</div>
 									<span></span>
 								</summary>
 								<div class="spollers__body">
@@ -371,7 +376,7 @@
 						</div>
 						<ul class="footer__social">
 							<li class="footer__item">
-								<a href="#" class="footer__link --icon-instagram">Instagram</a>
+								<a target="_blank" href="https://www.instagram.com/alisharoz_" class="footer__link --icon-instagram">Instagram</a>
 							</li>
 						</ul>
 					</div>
