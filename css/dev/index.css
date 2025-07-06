@@ -1269,14 +1269,7 @@ textarea {
     grid-template-columns: auto;
   }
   .full-block {
-    height: 40.625rem;
-  }
-  .full-block__img {
-    height: 100%;
-    position: static;
-  }
-  .full-block__img img {
-    object-position: center;
+    height: 30.625rem;
   }
   .full-block__title {
     bottom: 3.75rem;
