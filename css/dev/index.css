@@ -1271,6 +1271,9 @@ textarea {
   .full-block {
     height: 30.625rem;
   }
+  .full-block__img img {
+    object-position: center;
+  }
   .full-block__title {
     bottom: 3.75rem;
   }
