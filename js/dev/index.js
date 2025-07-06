@@ -239,6 +239,7 @@ function spollers() {
     }, setSpollerAction2 = function(e) {
       const el = e.target;
       if (el.closest("summary") && el.closest("[data-fls-spollers]")) {
+        if (el.closest("a")) return;
         e.preventDefault();
         if (el.closest("[data-fls-spollers]").classList.contains("--spoller-init")) {
           const spollerTitle = el.closest("summary");
@@ -8393,7 +8394,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     if (valid) {
-      alert("Форма успішно заповнена!");
       form.submit();
     }
   });
@@ -8428,5 +8428,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const words = fullName.trim().split(/\s+/);
     if (words.length < 2) return false;
     return words.every((word) => /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ']{2,}$/.test(word));
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const fullBlock = document.querySelector(".full-block");
+  const fullImg = fullBlock == null ? void 0 : fullBlock.querySelector("img");
+  if (fullBlock && fullImg) {
+    const onScroll2 = () => {
+      const rect = fullBlock.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const scrollProgress = 1 - rect.top / windowHeight;
+        const scale = 1 + scrollProgress * 0.2;
+        const translateY = scrollProgress * 30;
+        fullImg.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+      }
+    };
+    window.addEventListener("scroll", () => {
+      requestAnimationFrame(onScroll2);
+    });
+    onScroll2();
   }
 });
