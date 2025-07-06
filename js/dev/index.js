@@ -8426,27 +8426,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   function validateFullName(fullName) {
     const words = fullName.trim().split(/\s+/);
-    if (words.length < 2) return false;
-    return words.every((word) => /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ']{2,}$/.test(word));
-  }
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const fullBlock = document.querySelector(".full-block");
-  const fullImg = fullBlock == null ? void 0 : fullBlock.querySelector("img");
-  if (fullBlock && fullImg) {
-    const onScroll2 = () => {
-      const rect = fullBlock.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const scrollProgress = 1 - rect.top / windowHeight;
-        const scale = 1 + scrollProgress * 0.2;
-        const translateY = scrollProgress * 30;
-        fullImg.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-      }
-    };
-    window.addEventListener("scroll", () => {
-      requestAnimationFrame(onScroll2);
-    });
-    onScroll2();
+    if (words.length < 1) return false;
+    return words.every((word) => /^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ']{1,}$/.test(word));
   }
 });
