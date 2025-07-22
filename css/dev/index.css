@@ -830,7 +830,10 @@ button.swiper-pagination-bullet {
 .style__body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.25rem;
+  gap: 1.25rem;
+}
+.style__body:not(:last-child) {
+  margin-bottom: 1.25rem;
 }
 .style__img {
   opacity: 0;
@@ -1568,7 +1571,6 @@ textarea {
   }
   .style__body {
     grid-template-columns: auto;
-    row-gap: 1.25rem;
   }
   .style__img img {
     aspect-ratio: 448/300;
